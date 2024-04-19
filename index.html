@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phone Hunter API</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.10.2/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/47c063a947.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-white">
+    <section class="bg-cloud">
+        <section class="container">
+            <section>
+                <header>
+                    <h1 class="logo">Gadget Monkey</h1>
+                    <button id="sign-up" class="bg-blue">Sign Up</button>
+                </header>
+            </section>
+        </section>
+        <section class="banner">
+            <div>
+                <h1>Apple Iphone 13 Pro Max</h1>
+                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                    alteration in some form, by injected Corona.</p>
+                <button class="bg-blue">Buy Now</button>
+            </div>
+            <div class="banner-img">
+                <img src="./images/banner.png" alt="">
+            </div>
+        </section>
+    </section>
+
+    <main class="bg-white">
+        <section class="container">
+            <section class="search-input-p">
+                <h1>Search your phone</h1>
+                <div class="search-input">
+                    <input id="search" type="text" placeholder="Search your phone">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <button id="btn-search" class="bg-blue" onclick="searchPhoneByText()">Search</button>
+                </div>
+            </section>
+
+            <section id="loading-spinner" class="loading-container mt-6 text-center hidden">
+                <span class="loading loading-dots loading-lg"></span>
+            </section>
+
+            <section id="list-of-phones-id"
+                class="list-of-phones grid gap-12 items-center justify-center md:grid-cols-2 lg:grid-cols-3 mt-12">
+
+            </section>
+
+            <section>
+                <div>
+                    <button id="btn-show-all" class="bg-blue hidden">Show All</button>
+                </div>
+            </section>
+
+            <!-- Modal -->
+            <section>
+                <dialog id="show_modal" class="modal modal-bottom sm:modal-middle">
+                    <div class="modal-box">
+                        <div class="bg-cloud rounded-4">
+                            <img id="modal-img" class="block mx-auto p-8" src="" alt="">
+                        </div>
+                        <div class="mt-4 flex flex-col gap-4">
+                            <h1 class="text-2xl"><b>Name: </b><span id="phone-name"></span></h1>
+                            <p>It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.</p>
+                            <p><b>Storage: </b><span id="phone-storage"></span></p>
+                            <p><b>Chipset: </b><span id="phone-chipset"></span></p>
+                            <p><b>Memory: </b><span id="phone-memory"></span></p>
+                            <p><b>Slug: </b><span id="phone-slug"></span></p>
+                            <p><b>Release data: </b><span id="phone-release"></span></p>
+                            <p><b>Brand: </b><span id="phone-brand"></span></p>
+                            <p><b>GPS: </b><span id="phone-gps"></span></p>
+                        </div>
+                        <div class="modal-action">
+                            <form method="dialog">
+                                <!-- if there is a button in form, it will close the modal -->
+                                <button class="btn">Close</button>
+                            </form>
+                        </div>
+                    </div>
+                </dialog>
+            </section>
+
+        </section>
+    </main>
+
+    <footer class="bg-cloud">
+        <section class="container py-16">
+            <section class="flex flex-col md:flex-row gap-4 justify-between items-center">
+                <div>
+                    <h1 class="text-[28px] lg:text-[36px] font-bold">Gadget Monkey</h1>
+                    <p class="text-gray-600 lg:text-xl">You can definitely work.</p>
+                </div>
+                <div class="flex gap-4 items-center">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <button class="bg-blue">JOIN PREMIUM</button>
+                </div>
+            </section>
+
+            <hr class="w-100 my-10">
+
+            <section class="grid grid-cols-2 lg:grid-cols-4 justify-between gap-8 lg:gap-0">
+                <ul>
+                    <li><a href="#">Product</a></li>
+                    <li><a href="#">Browse Jobs</a></li>
+                    <li><a href="#">Remote Jobs</a></li>
+                    <li><a href="#">Startup Jobs</a></li>
+                    <li><a href="#">Company Jobs</a></li>
+                </ul>
+
+                <ul>
+                    <li><a href="#">Popular</a></li>
+                    <li><a href="#">UI/UX Design</a></li>
+                    <li><a href="#">Product Design</a></li>
+                    <li><a href="#">Back-End Developer</a></li>
+                    <li><a href="#">Front-End Developer</a></li>
+                </ul>
+
+                <ul>
+                    <li><a href="#">Resource</a></li>
+                    <li><a href="#">FAQ</a></li>
+                    <li><a href="#">Support</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                </ul>
+
+                <ul>
+                    <li><a href="#">Company</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Career Tips</a></li>
+                    <li><a href="#">Careers</a></li>
+                </ul>
+            </section>
+        </section>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
